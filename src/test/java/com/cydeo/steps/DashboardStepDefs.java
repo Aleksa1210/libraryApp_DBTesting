@@ -43,10 +43,8 @@ public class DashboardStepDefs
         //USER
 //        //2 Run Query
 //        DB_Util.runQuery("select count(*) from users");
-//
 //        //3. Store data
 //        String expected = DB_Util.getFirstRowFirstColumn(); //expected from database,
-//
 //        //4. Make an assertion
 //        Assert.assertEquals(expected, actualUserNumbers); // actual web site
 
@@ -58,10 +56,9 @@ public class DashboardStepDefs
 
 
         //Borrowed BOOKS
-        DB_Util.runQuery("select count(*) from book_borrow\n" +
-                "where is_returned=0");
+        DB_Util.runQuery("select count(*) from book_borrow\n" + "where is_returned=0");
         String expected3 = DB_Util.getCellValue(1,1);
-        Assert.assertEquals(expected3,actualBorrowedBookNumbers);
+        Assert.assertEquals(expected3,actualBorrowedBookNumbers); // actual from UI
 
 
         //5. Close the con.

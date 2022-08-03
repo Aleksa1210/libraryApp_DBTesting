@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Map;
 
 public class DB_Util {
-
     // declaring at class level so all methods can access
     private static Connection con ;
     private static Statement stm ;

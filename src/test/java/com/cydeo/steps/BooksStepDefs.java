@@ -1,5 +1,6 @@
 package com.cydeo.steps;
 
+import com.cydeo.pages.BasePage;
 import com.cydeo.pages.BookPage;
 import com.cydeo.pages.DashBoardPage;
 import com.cydeo.utility.BrowserUtil;
@@ -46,5 +47,51 @@ public class BooksStepDefs {
         BrowserUtil.waitForClickablility(bookPage.editBook(bookName), 5).click();
 
     }
+
+    @Then("verify book categories must match book categories table from db")
+    public void verify_book_categories_must_match_book_categories_table_from_db() {
+       String query = "select name from book_categories";
+       DB_Util.runQuery(query);
+       //sore data
+
+        List<String> expectedCategoryList = DB_Util.getColumnDataAsList(1);
+        Assert.assertEquals(expectedCategoryList, actualCategoryList);
+    }
+
+    @Then("book information must match the database for {string}")
+    public void book_information_must_match_the_database_for(String bookName) {
+        BrowserUtil.waitFor(3);
+        String actualBookName = bookPage.bookName.getAttribute("value");
+        String actualAuthorName = bookPage.author.getAttribute("value");
+        String actualISBN = bookPage.isbn.getAttribute("value");
+        String actualYear = bookPage.year.getAttribute("value");
+        String actualDesc = bookPage.description.getAttribute("value");
+
+
+
+        System.out.println(actualBookName);
+        System.out.println(actualAuthorName);
+
+        //get related book info from DB
+        String query = "select name, author, isbn, description, year from books where name='"+bookName+"'";
+
+        DB_Util.runQuery(query);
+       Map<String,String> rowMap = DB_Util.getRowMap(1);
+        String expectedBookName = rowMap.get("name");
+        String expectedAuthorName = rowMap.get("author");
+        String expectedISBN = rowMap.get("isbn");
+        String expectedDescription = rowMap.get("description");
+        String expectedYear = rowMap.get("year");
+
+        Assert.assertEquals(expectedBookName,actualBookName);
+        Assert.assertEquals(expectedAuthorName,actualAuthorName);
+        Assert.assertEquals(expectedISBN,actualISBN);
+        Assert.assertEquals(expectedDescription,actualDesc);
+        Assert.assertEquals(expectedYear,actualYear);
+
+    }
+
+
+
 
 }

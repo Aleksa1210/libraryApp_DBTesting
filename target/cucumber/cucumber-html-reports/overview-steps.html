@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>30 Jul 2022, 11:35</td>
+      <td>02 Aug 2022, 22:15</td>
     </tr>
   </tbody>
 </table>
@@ -112,54 +112,86 @@ $(document).ready(function() {
 
         <tbody>
             <tr>
-              <td class="location">com.cydeo.steps.DashboardStepDefs.the_informations_should_be_same_with_database()</td>
-              <td>1</td>
-              <td class="duration" data-value="601144000">0.601</td>
-              <td class="duration" data-value="601144000">0.601</td>
-              <td class="duration" data-value="601144000">0.601</td>
-              <td class="passed">100.00%</td>
-            </tr>
-            <tr>
-              <td class="location">com.cydeo.steps.DashboardStepDefs.the_user_logged_in_as(java.lang.String)</td>
-              <td>1</td>
-              <td class="duration" data-value="4346104000">4.346</td>
-              <td class="duration" data-value="4346104000">4.346</td>
-              <td class="duration" data-value="4346104000">4.346</td>
-              <td class="passed">100.00%</td>
-            </tr>
-            <tr>
-              <td class="location">com.cydeo.steps.DashboardStepDefs.user_gets_all_information_from_modules()</td>
-              <td>1</td>
-              <td class="duration" data-value="96175000">0.096</td>
-              <td class="duration" data-value="96175000">0.096</td>
-              <td class="duration" data-value="96175000">0.096</td>
+              <td class="location">com.cydeo.steps.Hooks.destroyDB()</td>
+              <td>2</td>
+              <td class="duration" data-value="1180000">0.001</td>
+              <td class="duration" data-value="1180000">0.001</td>
+              <td class="duration" data-value="2360000">0.002</td>
               <td class="passed">100.00%</td>
             </tr>
             <tr>
               <td class="location">com.cydeo.steps.Hooks.setUp()</td>
-              <td>1</td>
-              <td class="duration" data-value="2679383000">2.679</td>
-              <td class="duration" data-value="2679383000">2.679</td>
-              <td class="duration" data-value="2679383000">2.679</td>
+              <td>2</td>
+              <td class="duration" data-value="3748766000">3.748</td>
+              <td class="duration" data-value="3748766000">5.247</td>
+              <td class="duration" data-value="7497532000">7.497</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.steps.Hooks.setUpDB()</td>
+              <td>2</td>
+              <td class="duration" data-value="476459000">0.476</td>
+              <td class="duration" data-value="476459000">0.618</td>
+              <td class="duration" data-value="952918000">0.952</td>
               <td class="passed">100.00%</td>
             </tr>
             <tr>
               <td class="location">com.cydeo.steps.Hooks.tearDown(io.cucumber.java.Scenario)</td>
+              <td>2</td>
+              <td class="duration" data-value="93331500">0.093</td>
+              <td class="duration" data-value="93331500">0.104</td>
+              <td class="duration" data-value="186663000">0.186</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.steps.US01StepDef.establish_the_database_connection()</td>
+              <td>2</td>
+              <td class="duration" data-value="9589000">0.009</td>
+              <td class="duration" data-value="9589000">0.018</td>
+              <td class="duration" data-value="19178000">0.019</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.steps.US01StepDef.execute_query_to_get_all_columns()</td>
               <td>1</td>
-              <td class="duration" data-value="102962000">0.102</td>
-              <td class="duration" data-value="102962000">0.102</td>
-              <td class="duration" data-value="102962000">0.102</td>
+              <td class="duration" data-value="88838000">0.088</td>
+              <td class="duration" data-value="88838000">0.088</td>
+              <td class="duration" data-value="88838000">0.088</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.steps.US01StepDef.execute_query_to_get_all_i_ds_from_users()</td>
+              <td>1</td>
+              <td class="duration" data-value="100163000">0.100</td>
+              <td class="duration" data-value="100163000">0.100</td>
+              <td class="duration" data-value="100163000">0.100</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.steps.US01StepDef.verify_all_users_has_unique_id()</td>
+              <td>1</td>
+              <td class="duration" data-value="60104000">0.060</td>
+              <td class="duration" data-value="60104000">0.060</td>
+              <td class="duration" data-value="60104000">0.060</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.steps.US01StepDef.verify_the_below_columns_are_listed_in_result(java.util.List&lt;java.lang.String&gt;)</td>
+              <td>1</td>
+              <td class="duration" data-value="10295000">0.010</td>
+              <td class="duration" data-value="10295000">0.010</td>
+              <td class="duration" data-value="10295000">0.010</td>
               <td class="passed">100.00%</td>
             </tr>
         </tbody>
 
         <tfoot class="total">
           <tr>
-            <td>5</td>
-            <td>5</td>
-            <td class="duration">1.565</td>
-            <td class="duration">4.346</td>
-            <td class="duration">7.825</td>
+            <td>9</td>
+            <td>14</td>
+            <td class="duration">0.637</td>
+            <td class="duration">7.497</td>
+            <td class="duration">8.918</td>
             <td>Totals</td>
           </tr>
         </tfoot>
